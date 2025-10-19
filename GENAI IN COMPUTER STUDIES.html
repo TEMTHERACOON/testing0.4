@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenAI: A Tool for Advancing Your Computer Studies</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(#e5edff,#d0d8eb);
+  color: black;
+  scroll-behavior: smooth;
+}
+
+#maintitle{
+    margin-top: 70px;
+    box-sizing: unset;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    padding: 250px;
+    color: white;
+    text-align: center;
+    background-image: url("https://thumbs.dreamstime.com/b/ai-machine-learning-hands-robot-human-touching-big-data-network-connection-background-science-artificial-intelligence-172987598.jpg?w=992");
+    background-repeat: no-repeat;
+    background-size: cover;
+	  background-position: center;
+}
+
+#intro{
+     box-sizing: unset;
+     margin-top: 10px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(#004aad,#00449e);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header img{
+  padding: 0px;
+  margin: 0px;
+}
+header h1 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: white;
+  margin-left: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #cbe0ff;
+  border-bottom: 2px solid #cbe0ff;
+  padding-bottom: 2px;
+}
+
+
+section {
+  padding: 6rem 2rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-shadow: 4px 3px 5px #9ab5dd;
+  color: #013271;
+  margin-bottom: 1rem;
+  border-left: 5px solid #d07c07;
+  padding-left: 10px;
+  font-size: 1.5rem;
+  font-family: "Fjalla One", sans-serif;
+}
+
+section h3 {
+  font-family: "Fjalla One", sans-serif;
+  color: #003780;
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+}
+
+section p,
+section ul {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 25px;
+}
+
+ul li {
+  margin-left: 1.5rem;
+  list-style: disc;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.logos img {
+  margin-top:30px;
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.logos img:hover {
+  transform: scale(1.1);
+}
+
+.image-box {
+  background: #f0f4fb;
+  border: 1px solid #c7d5f1;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  margin: 1.2rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+a{
+  color:#00449e;
+}
+
+a:hover{
+  color:#c67300
+}
+
+@media (max-width: 768px) {
+  .image-box img {
+    max-width: 90%;
+  }
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #004aad;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ===== Fade-In Animation ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  background: linear-gradient(#004aad,#00449e);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+    #researchers{
+      max-width: 2000px
+    }
+    #gallery{
+      height: 400px;
+      width: 100%;
+      overflow: auto;
+      padding: 20px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      background-color:#f0f4fb;;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gitem{
+      align-items: center;
+      border: 1px solid #ccc;
+      width: 20%;
+      transition: transform 0.5 ease;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    }
+
+    .gitem:hover {
+   border: 1px solid #777;
+   transform: scale(1.1);
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+ .gitem img{
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      height: auto;
+ }
+
+ div.gitem div.desc {
+  text-align: center;
+  background-color: #c67300;
+  font-weight: bold;
+  padding: 2px
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.3rem 0.8rem;
+  }
+
+  section {
+    padding: 5rem 1.2rem 3rem;
+  }
+
+  .logos img {
+    height: 45px;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  section h3 {
+    font-size: 1.1rem;
+  }
+
+  .caption {
+    font-size: 0.85rem;
+  }
+  .gallery{
+    max-height: 400px;
+    max-width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>GenAI: A Tool for Advancing Your Computer Studies</h1> 
+    <nav>
+      <a href="#section1">Section 1</a>
+      <a href="#section2">Section 2</a>
+      <a href="#section3">Section 3</a>
+      <a href="#section4">Section 4</a>
+      <a href="#section5">Section 5</a>
+    </nav>
+  </header>
+
+  <!-- SECTION 1 -->
+   <section id="maintitle"  class="fade-in">
+    <h1 style=" font-family: monospace; margin-top: 70px; margin-right:40px; text-shadow:4px 3px 5px #c72e00;"> WELCOME</h1>
+   </section>
+
+   <section id="intro"class="fade-in">
+   <p>This webpage is a proposed output for a research entitled <i><b>"GENERATIVE AI IN THE LEARNING ADVANCEMENT OF COMPUTER STUDIES STUDENTS IN LYCEUM OF SOUTHERN LUZON, INC." </b></i>All given information within the webpage are all based on real gathered statements and experiences of computer studies students of <a href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan">Lyceum of Southern Luzon, Inc. </a></p>
+   </section>
+
+   <section id="section1" class="fade-in">
+    <h2>Our Recommended AI Tools</h2>
+    <p> This was based on actual Computer Studies students’ preferences from Lyceum of Southern Luzon, inc. (<i>from most commonly used to less used</i>)</p>
+
+    <div class="logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT logo">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/Microsoft_Copilot_Icon.svg/1200px-Microsoft_Copilot_Icon.svg.png" alt="Copilot logo">
+      <img src="https://cdn.worldvectorlogo.com/logos/grammarly-1.svg" alt="Grammarly logo">
+      <img src="https://store-images.s-microsoft.com/image/apps.58642.14365213924949883.5b96dfef-d30b-47eb-9d10-e400141442da.9f48e77b-a38f-42c3-b5ca-f9c583d1dacf" height="100px" alt="Quillbot logo">
+      <img src="https://static.vecteezy.com/system/resources/previews/046/861/646/non_2x/gemini-icon-on-a-transparent-background-free-png.png" height="100px" alt="Gemini logo">
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section id="section2" class="fade-in">
+    <h2>How Should You Use Certain AI-Generated Media?</h2>
+    <p>Based on our team’s research, AI tools have been found to improve comprehension, reduce learning anxieties, and boost confidence and study efficiency.</p>
+
+    <div class="media-section">
+      <h3>AI Videos and Images</h3>
+      <p>Used for visualizing topics such as flowcharts or programming processes.</p>
+      <div class="image-box">
+        <img src="example.png" alt="AI Flowchart Visualization">
+        <p class="caption">AI-generated flowchart visualization of a coding process</p>
+      </div>
+
+      <h3>AI Audios</h3>
+      <p>Helpful in providing learning strategies like multitasking.</p>
+      <div class="image-box">
+        <img src="https://images.unsplash.com/photo-1759984782106-4b56d0aa05b8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171" width="100%"alt="Person Studying with Headphones">
+        <p class="caption">Student listening to AI-generated study audio  (Credits:Julio Lopez)</p>
+      </div>
+
+      <p class="reminder">
+        <strong>Gentle Reminder:</strong> <i>Some students experienced minor inaccuracies and some have not used AI-generated videos yet — Try it to see how effective it is for you, and always use AI with caution!
+      </i></p>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section id="section3" class="fade-in">
+    <h2>How Can GenAI Adapt and Personalize Your Computer Studies?</h2>
+    <ul>
+      <li>It acts as a powerful learning partner providing personalized, adaptive, and supportive guidance.</li>
+      <li>It helps Computer Studies students understand complex concepts through clear explanations while identifying errors and suggesting improvements.</li>
+      <li>It creates a more individualized learning environment, allowing students to learn at their own pace and style.</li>
+    </ul>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section id="section4" class="fade-in">
+    <h2>Ways Computer Students Use GenAI to Build Their Programming Knowledge</h2>
+    <ul>
+      <li>Strengthen programming skills with GenAI tools.</li>
+      <li>Break down complex coding concepts into simpler explanations.</li>
+      <li>Test and improve codes with AI feedback and error detection.</li>
+      <li>Receive real-time hints and guidance during coding challenges.</li>
+    </ul>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section id="section5" class="fade-in">
+    <h2>How Can Using GenAI Transform Your Learning Habits?</h2>
+    <p>Many Computer Studies students view AI as helpful for gaining quick feedback and customizing lessons creatively and efficiently. However.... Dependency can lead to <i>reduced critical thinking and appreciation for real learning.</i></p>
+    <br> <br>
+    <h2 style="font-family:monospace"><u>How to Turn Bad AI Habits Into Good Ones:</u></h2>
+    <br>
+   <b> <ul>
+      <li>Be cautious and intentional with your AI usage.</li>
+      <li>Use AI as a guide, not as a replacement for your learning process.</li>
+      <li>Treat AI as a supportive tool that enhances your study journey.</li>
+    </ul></b>
+  </section>
+
+
+<center>
+    <section id="download" class="fade-in">
+    <h2 style="border-right: 5px solid #d07c07; background-color: #004aad; color:white; padding:5px;text-shadow: 4px 3px 5px #1f1638">Check out our research!</h2>
+    <p>Are you interested about our research paper and want to know more? Download our research by clicking the button hehe!</p>
+    <a href="paper.docx" download class="download-btn">
+       <h2 style="border: none;">🌟Download Research File</h2>
+    </a>
+  </section>
+</center>
+  <section id="researchers" class="fade-in">
+    <center><h2 style="border: 5px solid #013271;  border-radius: 20px; color: white; background: linear-gradient(#004aad,#00449e);text-shadow: 4px 3px 5px #1f1638;"> MEET THE RESEACHERS</h2></center>
+      <div id="gallery">
+        <div class="gitem">
+        <img src="R.jpg">
+        <div class="desc">BRABANGCO, JOHN ROY
+          <i><u>brabangcojhonroy@gmail.com</u></i>
+        </div>
+        </div>
+
+        <div class="gitem">
+        <img src="L.jpg">
+        <div class="desc">LAYLAY, LEI JUSTINE
+           <i><u>Leijustine39@gmail.com</u></i>
+        </div>
+        </div>
+        
+        <div class="gitem">
+        <img src="C.jpg">
+        <div class="desc">CAMPOY, KIRSTEN ELMY
+          <i><u>kirstencampoy@gmail.com</u></i>
+        </div>
+        </div>
+
+        <div class="gitem">
+        <img src="K.jpg"class="gitem">
+        <div class="desc">REGENCIA, KHLOIE ASHELY DIVINE
+          <i><u>yulevilldelpilar@gmail.com</u></i>
+        </div>
+        </div>
+
+        <div class="gitem">
+        <img src="M.jpg"class="gitem">
+        <div class="desc">VILLAMOR, MYKA
+          <u>mykavillamor15@gmail.com</u>
+        </div>
+        </div>
+  </div>
+  </section>
+
+
+  <footer>
+    <p>© 2025 GenAI in Computer Sutdies | Based on the experiences of BSIS and ICT students from Lyceum of Southern Luzon, Inc.</p>
+    <p> !we do not claim ownership to the shown images, credits to the rightful owners!</p>
+  </footer>
+
+  <script>
+
+// Fade-in animation for each section
+const fadeElements = document.querySelectorAll('.fade-in');
+
+function showOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  fadeElements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+
+// Smooth scrolling for nav links
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+
+    window.scrollTo({
+      top: target.offsetTop - 80,
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Optional: highlight nav link of the current section
+window.addEventListener('scroll', () => {
+  let current = '';
+  const sections = document.querySelectorAll('section');
+  const scrollY = window.pageYOffset;
+
+  sections.forEach(sec => {
+    const sectionTop = sec.offsetTop - 100;
+    const sectionHeight = sec.offsetHeight;
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      current = sec.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').substring(1) === current) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
